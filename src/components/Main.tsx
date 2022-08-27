@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UserList from "../pages/UserList";
 import AboutPage from "../pages/About";
+import AddWorker from "../pages/UserAddPage";
 
 const Main = () => {
   return (
@@ -14,15 +15,15 @@ const Main = () => {
         <div className="list-group list-group-flush">
           <a
             className="list-group-item list-group-item-action list-group-item-light p-3"
-            href="/projects"
+            href="/addworker"
           >
-            Projelerim
+            Add Worker
           </a>
           <a
             className="list-group-item list-group-item-action list-group-item-light p-3"
-            href="about"
+            href="/userlist"
           >
-            Shortcuts
+            User Lists
           </a>
           <a
             className="list-group-item list-group-item-action list-group-item-light p-3"
@@ -87,7 +88,7 @@ const Main = () => {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    <i className="fa-solid fa-user"></i>
+                    <i className="fa-solid fa-user">DsPro Admin</i>
                   </a>
                   <div
                     className="dropdown-menu dropdown-menu-end"
@@ -113,8 +114,9 @@ const Main = () => {
         <div className="container-fluid">
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<UserList />} />
+              <Route path="/userlist" element={<UserList />} />
               <Route path="about" element={<AboutPage />} />
+              <Route path="addWorker" element={<AddWorker />} />
             </Routes>
           </BrowserRouter>
         </div>

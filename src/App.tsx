@@ -4,7 +4,6 @@ import "./style/berk.css";
 import "./style/responsive.css";
 import "./style/styles.css";
 import "./js/main";
-import "./js/scripts";
 
 function App() {
   return (
